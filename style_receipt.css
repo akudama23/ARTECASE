@@ -1,0 +1,270 @@
+/* Style untuk halaman resi */
+.receipt-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.receipt-header {
+    border-bottom: 2px solid #eee;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.receipt-header h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.receipt-meta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.meta-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.meta-item span {
+    font-size: 14px;
+    color: #666;
+}
+
+.meta-item strong {
+    font-size: 16px;
+    color: #333;
+}
+
+.status-pending {
+    color: #FFA500;
+}
+
+.status-processing {
+    color: #4169E1;
+}
+
+.status-completed {
+    color: #32CD32;
+}
+
+.status-cancelled {
+    color: #FF0000;
+}
+
+.shipping-info {
+    margin-bottom: 30px;
+}
+
+.shipping-info h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 6px;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-item span {
+    font-size: 14px;
+    color: #666;
+}
+
+.info-item strong {
+    font-size: 15px;
+    color: #333;
+}
+
+.address-section {
+    margin-bottom: 30px;
+}
+
+.address-card {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 6px;
+    border-left: 4px solid #4169E1;
+}
+
+.address-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.address-card p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.items-section {
+    margin-bottom: 30px;
+}
+
+.items-section h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.items-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.items-table th, .items-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.items-table th {
+    background-color: #f5f5f5;
+    font-weight: 600;
+    color: #333;
+}
+
+.product-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.product-info img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.summary-section {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 6px;
+    margin-bottom: 30px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.summary-row.total {
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.payment-info {
+    margin-bottom: 30px;
+}
+
+.payment-info h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.payment-info p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.bank-details {
+    background: #f5f5f5;
+    padding: 15px;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
+.receipt-footer {
+    border-top: 2px solid #eee;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.receipt-footer p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.primary-button, .secondary-button {
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.primary-button {
+    background-color: #4169E1;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.primary-button:hover {
+    background-color: #3151B5;
+}
+
+.secondary-button {
+    background-color: #4169E1;
+    color: #ffffff;
+    border: 1px solid #4169E1;
+}
+
+.secondary-button:hover {
+    background-color: #3861ae;
+}
+
+.payment-proof {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+}
+
+.payment-proof img {
+    border: 1px solid #ddd;
+    margin-top: 10px;
+}
+@media print {
+    .header, .main-footer-container, .action-buttons {
+        display: none;
+    }
+
+    body {
+        padding: 0;
+        margin: 0;
+        background: none;
+    }
+
+    .receipt-container {
+        box-shadow: none;
+        padding: 0;
+    }
+}

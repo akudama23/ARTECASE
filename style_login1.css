@@ -1,0 +1,586 @@
+/* Base HTML & Body Styles */
+:root {
+    --spacing-1: 0.25rem; /* 4px */
+    --spacing-2: 0.5rem;  /* 8px */
+    --spacing-4: 1rem;   /* 16px */
+    --spacing-6: 1.5rem;  /* 24px */
+    --spacing-8: 2rem;   /* 32px */
+    --spacing-10: 2.5rem; /* 40px */
+    --spacing-12: 3rem;  /* 48px */
+    --spacing-20: 5rem;  /* 80px */
+
+    --font-size-xs: 15px; /* 12px */
+    --font-size-sm: 0.875rem; /* 14px */
+    --font-size-base: 1rem; /* 16px */
+    --font-size-lg: 1.125rem; /* 18px */
+    --font-size-xl: 1.25rem; /* 20px */
+    --font-size-10px: 0.625rem; /* 10px */
+
+    --color-black: #000;
+    --color-white: #fff;
+    --color-gray-200: #e5e7eb;
+    --color-gray-300: #d1d5db;
+    --color-gray-400: #9ca3af;
+    --color-gray-700: #374151;
+    --color-red-600: #dc2626;
+    --color-red-700: #b91c1c;
+
+    --max-w-7xl: 80rem; /* 1280px */
+    --max-w-md: 28rem; /* 448px */
+    --max-w-sm: 24rem; /* 384px */
+    --max-w-xs: 20rem; /* 320px */
+
+    --color-primary-accent: #f15959; /* A clean blue or cyan for accents */
+    --color-dark-surface: #1e1e1e; /* Darker background for elements */
+    --color-text-light: #e0e0e0; /* Lighter text for dark backgrounds */
+    --color-gray-dark: #333; /* Darker gray for borders/separators */
+    --shadow-subtle: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    --shadow-glow: 0 0 10px rgba(0, 123, 255, 0.4); /* Subtle glow for focus */
+
+    --primary-red: #DB4444;
+    --text-dark: #333;
+    --text-light: #FAFAFA;
+    --bg-light: #F4F4F4;
+    --bg-card: #F3F3F3;
+    --divider-color: rgba(255, 255, 255, 0.3);
+}
+
+
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+/* Tambahkan ini di bagian paling atas CSS */
+html {
+    box-sizing: border-box;
+    width: 100%;
+    overflow-x: hidden; /* Mencegah horizontal scroll */
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.body-base {
+    font-family: "Inter", sans-serif;
+    background-color: rgb(255, 255, 255);
+    color: var(--color-black);
+    margin: 0; /* Ensures no default body margin */
+    line-height: 1.5; /* Default line-height */
+}
+
+/*promo bar top*/
+.top-promo-bar {
+    background: rgb(0, 0, 0);
+    height: 3.1875rem; /* 51px */
+    width: 100%;
+}
+
+/* Header */
+.header-base{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 1px 10px rgb(139, 139, 139);
+    position: relative; /* For the divider line */
+    z-index: 100; /* Ensure header is on top */
+    height: 100px;
+    width: auto;
+}
+
+.header-content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.25rem 0; /* 20px */
+    background-color: #ffffff;
+}
+
+.header-logo-img {
+    height: 50px; /* 69px */
+    width: auto; /* 108px */
+    margin-left:-100px;
+    background-color: #ffffff;
+    margin-right: 25px;
+    
+}
+
+.header-nav-menu {
+    max-height: 50px;
+    width: auto;
+    display: flex;
+    gap: 60px; /* 48px */
+    align-items: center;
+    margin-right: 500px;
+    margin-left: 50px;
+    align-items: center;
+    
+}
+
+.header-nav-menu a {
+    font-size: 15px; /* 16px */
+    font-weight: 200;
+    line-height: 1.5rem; /* 24px */
+    position: relative;
+    color: var(--text-dark);
+    gap: 50px;
+    
+}
+
+.header-nav-menu a.nav-active {
+    font-weight: 500;
+}
+
+.header-nav-menu a.nav-active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--text-dark);
+}
+
+.header-nav-menu a:hover {
+    color: var(--primary-red); /* Example hover effect */
+}
+
+.nav-utility i {
+    font-size: 1.25rem; /* 20px */
+    margin-left: 1.25rem; /* 20px */
+    cursor: pointer;
+    color: var(--text-dark);
+    transition: color 0.3s ease;
+}
+
+.nav-utility i:hover {
+    color: var(--primary-red);
+}
+
+.header-divider {
+    width: 100%;
+    height: 5px;
+    background-color: rgb(222, 222, 222);
+}
+
+
+/* Main Content */
+.main-content-area {
+    max-width: var(--max-w-7xl);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--spacing-6);
+    padding-right: var(--spacing-6);
+    padding-top: var(--spacing-10); /* py-10 */
+    padding-bottom: var(--spacing-10); /* py-10 */
+    display: flex;
+    flex-direction: row; /* Align items in a row */
+    align-items: center; /* Center items vertically */
+}
+
+.main-image-section {
+    flex: 1; /* Allow image section to take space */
+    display: flex;
+    justify-content: flex-start; /* Align image to the left */
+    margin-left: 100px;
+    margin-top: 50px;
+}
+
+.main-image {
+    max-width: 700px; /* Increased size for image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 0.375rem; /* rounded-md */
+}
+
+/* --- Main Login Form Section --- */
+
+.main-login-form {
+    flex: 1; /* Allow form section to take space */
+    max-width: var(--max-w-sm);
+    margin-left: var(--spacing-10); /* Space between image and form */
+    background-color: var(--color-white); /* Light background */
+    padding: var(--spacing-8); /* Add internal padding */
+    border-radius: var(--spacing-1); /* Slightly rounded corners */
+    
+    
+}
+
+.form-title {
+    font-size: var(--font-size-xl); /* Make title a bit larger */
+    font-weight: 700; /* Make it bolder */
+    margin-bottom: var(--spacing-8); /* More space below title */
+    color: var(--color-black); /* Lighter text color for contrast */
+    text-align: left; /* Left align the title */
+    letter-spacing: 0.05em; /* Add slight letter spacing */
+}
+
+.form-group {
+    margin-bottom: var(--spacing-6); /* mb-6 */
+}
+
+.form-input {
+    width: 100%; /* Full width */
+    font-size: var(--font-size-sm); /* Slightly larger text in inputs for readability */
+    color: var(--color-black); /* Lighter text color */
+    padding: var(--spacing-2) var(--spacing-4); /* More padding for a comfortable input field */
+    background-color: var(--color-white); /* Light gray for input background */
+    border: 1px solid var(--color-gray-300); /* Light border */
+    border-radius: var(--spacing-1); /* Rounded corners */
+}
+
+.form-input::placeholder {
+    color: var(--color-gray-400); /* Placeholder color */
+    opacity: 0.5; /* Make placeholder slightly more subtle */
+}
+
+.form-input:focus {
+    outline: none; /* Remove default outline */
+    border-color: var(--color-primary-accent); /* Focus color */
+    box-shadow: var(--shadow-glow); /* Add a subtle glow on focus */
+    transition: all 0.3s ease-in-out; /* Smooth transition for focus */
+}
+
+.form-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: var(--spacing-6); /* Add some space above actions */
+}
+
+.login-button {
+    background-color: var(--color-primary-accent); /* Use the accent color */
+    color: var(--color-white);
+    font-size: var(--font-size-sm); /* Slightly larger button text */
+    font-weight: 600; /* Make it bold */
+    padding: var(--spacing-2) var(--spacing-8); /* More horizontal padding */
+    border-radius: var(--spacing-1); /* Slightly rounded button */
+    border: none; /* Remove default button border */
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    letter-spacing: 0.03em; /* Slight letter spacing for button text */
+    text-transform: uppercase; /* Uppercase text for a bolder look */
+}
+
+.login-button:hover {
+    background-color: var(--color-red-700); /* Darker accent on hover */
+    box-shadow: var(--shadow-glow); /* Subtle glow on hover */
+}
+
+.forgot-password-link {
+    color: var(--color-dark-surface); /* Use the accent color */
+    font-size: var(--font-size-xs);
+    font-weight: 400; /* font-normal */
+    text-decoration: none; /* Remove default underline */
+    transition: color 0.2s ease;
+    font-size: 12px;
+}
+
+.forgot-password-link:hover {
+    text-decoration: underline;
+    color: var(--color-red-600); /* A slightly different hover color if desired */
+}
+
+/* Footer */
+.footer-base {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    margin-top: var(--spacing-20); /* mt-20 */
+    font-size: var(--font-size-xs);
+    font-weight: 300; /* font-light */
+}
+
+.footer-content-wrapper {
+    max-width: var(--max-w-7xl);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--spacing-6); /* px-6 */
+    padding-right: var(--spacing-6); /* px-6 */
+    padding-top: var(--spacing-12); /* py-12 */
+    padding-bottom: var(--spacing-12); /* py-12 */
+    display: flex;
+    flex-direction: column; /* flex-col */
+}
+
+@media (min-width: 1024px) { /* md breakpoint */
+    .footer-content-wrapper {
+        flex-direction: row; /* md:flex-row */
+        justify-content: space-between; /* md:justify-between */
+        gap: var(--spacing-20); /* Using gap for md:space-x-20 */
+    }
+
+    .navbar-wrapper {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .main-nav ul {
+        gap: 1.5rem; /* 24px */
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .nav-utility {
+        margin-top: 0.5rem;
+    }
+
+
+
+}
+
+/* Footer styles */
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 24px; /* Space between items */
+    flex: 1; /* Allow column to grow and shrink */
+    min-width: 150px; /* Minimum width for responsiveness */
+}
+
+/* Footer column title */
+.footer-column-title {
+    color: var(--footer-text-color);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+    margin: 0; /* Remove default margin */
+}
+
+/* Footer link group */
+.footer-links-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+/* Each link/text item in footer */
+.footer-link-item {
+    color: var(--footer-text-color);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-decoration: none; /* For links */
+    white-space: nowrap; /* Prevent wrap on link items */
+    transition: color 0.3s ease;
+}
+
+.footer-link-item:hover {
+    color: rgba(255, 255, 255, 0.8); /* Example hover effect */
+}
+
+/* Address item with specific width */
+.footer-address {
+    width: 175px;
+    white-space: normal; /* Allow address to wrap if too long */
+}
+
+/* Social link (Instagram) */
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Space between icon and text */
+    color: #ffffff;
+}
+.social-link i {
+    font-size: 1.125rem; /* Icon size */
+}
+
+/* Copyright section */
+.footer-bottom-section {
+    width: 100%;
+    padding: 1rem 0; /* Vertical padding for copyright section */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* For content inside */
+    align-items: center; /* Center content horizontally */
+    gap: 16px;
+    border-top: 1px solid var(--footer-divider-color);
+}
+
+/* Copyright info */
+.copyright-info {
+    opacity: var(--copyright-text-opacity);
+    display: flex; /* Use flex for icon and text */
+    justify-content: center; /* Center content */
+    align-items: center;
+    gap: 12px;
+}
+
+/* Copyright icon */
+.copyright-icon {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.copyright-icon .icon-shape-1 { /* First div in icon */
+    width: 16.67px;
+    height: 16.67px;
+    left: 1.67px;
+    top: 1.67px;
+    position: absolute;
+    outline: 1.50px var(--copyright-icon-color) solid;
+    outline-offset: -0.75px;
+}
+
+.copyright-icon .icon-shape-2 { /* Second div in icon */
+    width: 5.83px;
+    height: 6.67px;
+    left: 6.67px;
+    top: 6.67px;
+    position: absolute;
+    outline: 1.50px var(--copyright-icon-color) solid;
+    outline-offset: -0.75px;
+}
+
+/* Copyright text */
+.copyright-text {
+    color: var(--copyright-icon-color); /* Or use --footer-text-color */
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    word-wrap: break-word;
+    margin: 0; /* Remove default margin */
+}
+
+/* Perbaikan untuk mobile */
+@media (max-width: 768px) {
+    .body-base {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    /* Header mobile */
+    .header-base {
+        height: auto;
+        padding: 0.5rem 0;
+    }
+
+    .header-content-wrapper {
+        flex-direction: column;
+        padding: 0.5rem;
+    }
+
+    .header-logo-group {
+        margin: 0 auto;
+        padding: 0.5rem 0;
+    }
+
+    .header-logo-img {
+        height: 40px;
+        margin: 0 auto;
+    }
+
+    .header-nav-menu {
+        margin: 0;
+        padding: 0.5rem 1rem;
+        gap: 1rem;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        justify-content: flex-start;
+    }
+
+    .header-nav-menu a {
+        font-size: 0.8rem;
+        white-space: nowrap;
+        padding: 0.3rem 0;
+    }
+
+    /* Main content mobile */
+    .main-content-area {
+        flex-direction: column;
+        padding: 1rem;
+        margin: 0;
+        width: 100%;
+    }
+
+    .main-image-section {
+        margin: 0;
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .main-image {
+        max-width: 50%;
+        height: auto;
+    }
+
+    .main-login-form {
+        margin: 1rem 0 0 0;
+        width: 100%;
+        padding: 1.5rem;
+        max-width: 100%;
+    }
+
+    .form-title {
+        text-align: center;
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Form elements */
+    .form-group {
+        margin-bottom: 1rem;
+    }
+
+    .form-input {
+        padding: 0.75rem;
+        font-size: 1rem;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    .login-button {
+        width: 100%;
+        padding: 0.75rem;
+        font-size: 1rem;
+    }
+
+    .forgot-password-link {
+        text-align: center;
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
+    /* Footer mobile */
+    .footer-content-wrapper {
+        padding: 1.5rem;
+    }
+
+    .footer-column {
+        align-items: center;
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .footer-links-group {
+        align-items: center;
+    }
+}
+
+/* Untuk layar sangat kecil (maksimal 480px) */
+@media (max-width: 480px) {
+    .main-content-area {
+        padding: 0.5rem;
+    }
+
+    .main-login-form {
+        padding: 1rem;
+    }
+
+    .form-title {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+
+    .form-input {
+        padding: 0.6rem;
+    }
+
+    .login-button {
+        padding: 0.6rem;
+    }
+}

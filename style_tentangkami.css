@@ -1,0 +1,203 @@
+/* Global Styles */
+:root {
+    --primary-red: #DB4444;
+    --text-dark: #333;
+    --text-light: #FAFAFA;
+    --bg-light: #F4F4F4;
+    --bg-card: #F3F3F3;
+    --divider-color: rgba(255, 255, 255, 0.3);
+}
+/*promo bar top*/
+.top-promo-bar {
+    background: black;
+    height: 3.1875rem; /* 51px */
+    width: 100%;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.25rem; /* 20px */
+}
+
+
+/* Section Styles */
+.section {
+    padding: 2.5rem 0; /* 40px */
+}
+
+.section-title {
+    font-size: 2.25rem; /* 36px */
+    font-weight: 600;
+    line-height: 3rem; /* 48px */
+    margin-bottom: 0; /* Space below title, reduced for alignment */
+    margin-top: 50px;
+    margin-left: 16px;
+}
+
+/* About Us Styles */
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.md\:flex-row {
+    flex-direction: row; /* Flex row for medium screens */
+}
+
+.md\:flex-1 {
+    flex: 1; /* Flex grow for medium screens */
+    margin-top: -50px;
+}
+
+.text-lg {
+    font-size: 1.125rem; /* Large text size */
+    margin-right: 50px;
+}
+
+.leading-relaxed {
+    line-height: 1.5; /* Relaxed line height */
+}
+
+.rounded-lg {
+    border-radius: 0.5rem; /* Rounded corners */
+}
+
+.shadow-lg {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Large shadow */
+}
+
+/* Gambar Styles */
+.relative {
+    position: relative; /* Untuk posisi gambar dan teks */
+    margin-left: auto; /* Memindahkan gambar ke tepi kanan */
+}
+
+img {
+    max-width: 400px; /* Ukuran maksimum gambar yang lebih besar */
+    height: auto; /* Menjaga rasio aspek */
+    margin-left: 100px;
+    margin-bottom: 10px;
+    margin-top: -10px;
+}
+
+/* Teks Penjelasan */
+.text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Pusatkan teks secara vertikal */
+    margin-left: 10px; /* Jarak antara teks dan gambar */
+    margin-bottom: 200px; /* Tambahkan ruang antara gambar dan teks */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+
+    .about-navbar-wrapper {
+        flex-direction: column;
+        align-items: center;
+        margin-right: 0;
+        gap: 1rem;
+    }
+    
+    .logo {
+        order: -1; /* Memindahkan logo ke atas */
+        margin-bottom: 1rem;
+        height: 30px;
+        width: auto;
+    }
+    
+    .main-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+    
+    .section {
+        padding: 1.5rem 0; /* Adjust padding for smaller screens */
+    }
+
+    .section-title {
+        font-size: 1.875rem; /* Smaller title size */
+        line-height: 2.5rem; /* Adjust line height */
+    }
+    .relative {
+        position: relative;
+        margin-bottom: 30px;
+    }
+
+    .text-lg {
+        font-size: 1rem; /* Smaller text size for paragraphs */
+    }
+
+    img {
+        max-width: 100%; /* Responsif untuk gambar pada layar kecil */
+    }
+}
+
+
+/* Teks Penjelasan */
+    .text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Pusatkan teks secara vertikal */
+    margin-left: 20px; /* Jarak antara teks dan gambar */
+    margin-top: 20px; /* Tambahkan ruang antara gambar dan teks */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .section {
+        padding: 1.5rem 1rem;
+    }
+    
+    .section-title {
+        text-align: center;
+        margin-left: 0;
+        margin-top: 1rem;
+        font-size: 1.8rem;
+    }
+    
+    .flex-row {
+        flex-direction: column;
+    }
+    
+    .md\:flex-1 {
+        margin-top: 1rem;
+        margin-right: 0;
+    }
+    
+    img {
+        max-width: 100%;
+        margin: 1rem auto;
+        display: block;
+    }
+    
+    .text-lg {
+        font-size: 10px;
+        margin-right: 0;
+        text-align: justify;
+    }
+    
+    .text-container {
+        margin-left: 0;
+        margin-right: 10px;
+        margin-bottom: 1rem;
+    }
+}
